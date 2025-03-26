@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stylish Graph Visualization</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="controls">
+  <h2>Topological Sort Graph Visualization</h2>
+  <label for="graphSelect">Select a predefined graph:</label>
+  <select id="graphSelect" onchange="loadPredefinedGraph()">
+    <option value="default">Choose Graph</option>
+    <option value="graph1">Graph 1</option>
+    <option value="graph2">Graph 2</option>
+    <option value="graph3">Graph 3</option>
+    <option value="graph4">Graph 4</option>
+    <option value="graph5">Graph 5</option>
+    <option value="graph6">Graph 6</option>
+    <option value="graph7">Graph 7</option>
+    <option value="graph8">Graph 8</option>
+    <option value="graph9">Graph 9</option>
+    <option value="graph10">Graph 10</option>
+    <option value="graph11">Graph 11</option>
+    <option value="graph12">Graph 12</option>
+    <option value="graph13">Graph 13</option>
+    <option value="graph14">Graph 14</option>
+    <option value="graph15">Graph 15</option>
+    <option value="graph16">Graph 16</option>
+    <option value="graph17">Graph 17</option>
+    <option value="graph18">Graph 18</option>
+    <option value="graph19">Graph 19</option>
+    <option value="graph20">Graph 20</option>
+  </select>
+  
+  <h3>Or Enter Custom Graph Data</h3>
+  <label>Nodes (id,x,y):</label>
+  <textarea id="nodesInput" placeholder="1,100,100" rows="3" cols="30"></textarea><br>
+  <label>Edges (from,to):</label>
+  <textarea id="edgesInput" placeholder="1,2" rows="3" cols="30"></textarea><br>
+  
+  <button class="btn" onclick="loadGraphData()">Load Custom Graph</button>
+  <button class="btn" onclick="startTopologicalSort()">Start Topological Sort</button>
+  <button class="btn reset" onclick="reset()">Reset</button>
+</div>
+
+<canvas id="canvas" width="800" height="600"></canvas>
+
+<div id="nodeData">
+  <div id="currentNodeInfo">Node information will appear here...</div>
+</div>
+
+<div id="nodeTooltip" class="node-tooltip"></div>
+
+<!-- Footer Section -->
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+      <p>Created by Sumit Sharma</p>
+    </div>
+  </footer>
+  
+
+<script src="script.js"></script>
+</body>
+</html>
